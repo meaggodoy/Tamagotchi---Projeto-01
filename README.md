@@ -34,6 +34,7 @@ deve ter um menu inicial, com as seguintes opções:
 4. Dar banho
 5. Ver status
 6. Desligar
+
 Detalhamento de funções
 • Avançar o tempo: Ao escolher essa função, o jogador faz o pet “avançar 8 horas de vida”
 em seu tempo. Isso impactará em diversas das funcionalidades do bichinho virtual. A cada
