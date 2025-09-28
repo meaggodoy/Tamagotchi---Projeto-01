@@ -1,4 +1,4 @@
-# Tamagotchi---Projeto-01
+# Tamagotchi Projeto01
 Primeiro projeto da disciplina de Conceitos de Algoritmos.
 
 Apresentado no dia 23 de novembro de 1996, o Tamagotchi era uma espécie de chaveiro que
