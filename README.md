@@ -35,26 +35,26 @@ deve ter um menu inicial, com as seguintes opções:
 5. Ver status
 6. Desligar
 
-Detalhamento de funções
-• Avançar o tempo: Ao escolher essa função, o jogador faz o pet “avançar 8 horas de vida”
+#Detalhamento de funções:
+- Avançar o tempo: Ao escolher essa função, o jogador faz o pet “avançar 8 horas de vida”
 em seu tempo. Isso impactará em diversas das funcionalidades do bichinho virtual. A cada
 24horas passadas, o pet envelhece um dia. O tempo máximo de vida para o pet é de 7
 dias, após isso, ele morre de velhice. Nesse caso, o jogador ‘ganha o jogo’, pois fez com
 que seu bichinho vivesse feliz até o fim.
-• Alimentar: Ao alimentar o pet, sua fome diminuirá em 4 pontos. Chegando ao máximo de
+- Alimentar: Ao alimentar o pet, sua fome diminuirá em 4 pontos. Chegando ao máximo de
 fome 0. Tentar alimentar um pet que está com fome 0, fará com que sua felicidade diminua
 em 2 pontos.
-• Jogar: Ao escolher a função jogar, o pet e o usuário farão uma partida de pedra, papel e
+- Jogar: Ao escolher a função jogar, o pet e o usuário farão uma partida de pedra, papel e
 tesoura. Caso o pet vença, sua felicidade aumentará em 5 pontos. Caso ele perca, sua
 felicidade aumentará em 3 pontos.
-• Dar banho: A função de dar banho fará com que a limpeza de seu pet chegue a 10 pontos.
+- Dar banho: A função de dar banho fará com que a limpeza de seu pet chegue a 10 pontos.
 A cada 8 horas, o pet perde 2 pontos em limpeza. Tentar dar banho em um pet com 10
 pontos de limpeza, fará com que ele reduza a felicidade em 6 pontos.
-• Ver status: A função ver status deve mostrar ao usuário todas as informações pertinentes
+- Ver status: A função ver status deve mostrar ao usuário todas as informações pertinentes
 para que o usuário possa cuidar de seu pet da maneira adequada. Também deve mostrar
 a idade atual do pet. Extra: O programador pode disparar mensagens fora dessa função
 para alertar ao usuário quando seu pet estiver necessitando de cuidado urgente, para
 tentar evitar sua morte precoce.
-• Caso o pet morra de fome, tristeza ou sujeira, o programa deverá encerrar, mostrando a
+- Caso o pet morra de fome, tristeza ou sujeira, o programa deverá encerrar, mostrando a
 mensagem para o usuário de tempo de vida do pet e informando a causa da sua morte
 precoce.
