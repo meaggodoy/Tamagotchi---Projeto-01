@@ -1,6 +1,6 @@
 programa
 {
-	inclua biblioteca Util --> u
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
@@ -8,7 +8,7 @@ programa
 		inteiro avancarTempo, tempoHora = 0, tempoDia = 0
 		inteiro fome = 0, felicidade = 5, opcao
 		inteiro numSelecionado, jokenpo
-		inteiro tomarBanho, limpeza = 1
+		inteiro tomarBanho, limpeza = 10
 		
 		faca {
 			escreva("\nDigite uma opção \n1 - Avançar Tempo; 2 - Alimentar; 3 - Jogar; 4 - Dar Banho; 5 - Ver Status; 6 - Desligar ")
@@ -18,11 +18,22 @@ programa
 				//função avançar tempo -> cada avanço representa 8 horas; 1 dia são 3 avanços; o pet vive por 7 dias
 
 				faca {
-					escreva("Avançar tempo? \n0 - não; 1 - Sim; 2 - Voltar para o menu ")
+					escreva("Avançar tempo? \n0 - Não; 1 - Sim; 2 - Voltar para o menu ")
 					leia(avancarTempo)
 	
 					se (avancarTempo == 1) {
 						tempoHora = tempoHora + 8
+
+						fome = fome + 4 
+						limpeza = limpeza - 2
+						
+						se (limpeza <= 0) {
+							escreva("Seu pet morreu de sujeira.. -_-") 
+						}
+
+						se (fome >= 10) {
+							escreva("Seu pet morreu de fome.. -_-")
+						}
 	
 						se (tempoHora == 24) {
 							tempoDia++
@@ -44,23 +55,22 @@ programa
 				} enquanto (avancarTempo < 2 e tempoDia < 7)
 			} se (menu == 2) {
 				faca {
-					escreva("\nOpção 1: Alimentar o pet")
-					escreva("\nOpção 2: Não alimentar o pet")
-					escreva("\nDigite a opção desejada: ")
-					leia(opcao)
+					escreva("Alimentar o pet? \n1 - Sim; 2 - Não ")
+					leia(opcao) 
 
 					se (opcao == 1){
-						se (fome > 0){
-							fome = fome - 4
-						
-							escreva ("\nVocê alimentou o pet!")
-							escreva ("\nFome atual: ",fome)
-							escreva("\nFelicidade atual: ", felicidade)
-						} se (fome <= 0) {
+						se (fome <= 0) {
 							fome = 0
 							felicidade = felicidade - 2
 
 							escreva("\nO pet não queria comer e ficou triste...")
+							escreva("\nFelicidade atual: ", felicidade)
+						} se (fome > 0){
+							fome = fome - 4
+							felicidade = felicidade + 2
+						
+							escreva ("\nVocê alimentou o pet!")
+							escreva ("\nFome atual: ",fome)
 							escreva("\nFelicidade atual: ", felicidade)
 						}
 					} se (opcao == 2){
@@ -95,24 +105,56 @@ programa
     				}
       				escreva("\nA minha felicidade agora é de: ",felicidade)
   			} se (menu == 4) {
-  				faca{
-					escreva("\n1Deseja tomar banho: \n1 - Sim; 2 - Não ")
+					escreva("Deseja tomar banho: \n1 - Sim; 2 - Não ")
 					leia(tomarBanho)
 
 					se(tomarBanho == 1){
-						limpeza = 10
-						escreva("Seu pet está com a limpeza em: ", limpeza)
-						
 						se (limpeza >= 10){
 							felicidade = felicidade - 6
-							escreva("\nA felicidade do pet é: ", felicidade)	
-						} se (felicidade <= 0) {
-							escreva("\nSeu pet morreu -_-")	
-						}
-					} se(tomarBanho == 2) {
+							escreva("Você deu banho no seu pet, mas ele não estava sujo e acabou ficando triste..")
+							escreva("\nA felicidade do pet é: ", felicidade) 
+
+							se (felicidade <= 0) { 
+								escreva("\nSeu pet morreu -_-") 
+							}
+						} se (limpeza < 10) {
+							limpeza = 10
+							escreva("Você deu banho no seu pet!") 
+							escreva("\nSeu pet está com a limpeza em: ", limpeza)
+						} 
+					} se(tomarBanho == 2) { 
 						escreva("Seu pet não quer tomar banho")
 					}																
-				} enquanto (tomarBanho == 1 e felicidade>=0)
+  			} se (menu == 5) {
+  				se (tempoDia <= 1) {
+					escreva("A idade do pet é ", tempoDia, " dia e ", tempoHora, " horas")
+				} se (tempoDia > 1 e tempoDia < 7) {
+					escreva("A idade do pet é ", tempoDia, " dias e ", tempoHora, " horas")
+				} 
+
+				se (limpeza >= 7 ) {
+					escreva("\nSeu pet está limpo! Limpeza em ", limpeza)
+				} se (limpeza >= 4 e limpeza < 7) {
+					escreva("\nSeu pet está ficando sujo.. Limpeza em ", limpeza)
+				} se (limpeza < 4) {
+					escreva("\nSeu pet está sujo! Limpeza em", limpeza)
+				}
+
+				se (felicidade >= 7 ) {
+					escreva("\nSeu pet está feliz! Felicidade em ", felicidade)
+				} se (felicidade >= 4 e felicidade < 7) {
+					escreva("\nSeu pet está ficando triste.. Felicidade em ", felicidade)
+				} se (felicidade < 4) {
+					escreva("\nSeu pet está triste! Felicidade em", felicidade)
+				}
+  				
+  				se (fome >= 7 ) {
+					escreva("\nSeu pet está com fome! Fome em ", fome)
+				} se (fome >= 4 e fome < 7) {
+					escreva("\nSeu pet está ficando com fome.. Fome em ", fome)
+				} se (fome < 4) {
+					escreva("\nSeu pet está está bem alimentado! Fome em", fome)
+				}
   			}
 		} enquanto (menu < 6)
 	}
@@ -122,7 +164,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3419; 
+ * @POSICAO-CURSOR = 715; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
