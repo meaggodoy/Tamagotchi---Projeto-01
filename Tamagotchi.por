@@ -71,17 +71,19 @@ programa
 	        				
 	        				limpeza = limpeza - 2	        				
 						se (limpeza >= 7 ) {
-							escreva(nomePet, " está limpo(a)! Limpeza em ", limpeza)
+							escreva("\n", nomePet, " está limpo(a)! Limpeza em ", limpeza)
 						} se (limpeza >= 4 e limpeza < 7) {
-							escreva(nomePet, " está ficando sujo(a).. Limpeza em ", limpeza)
+							escreva("\n", nomePet, " está ficando sujo(a).. Limpeza em ", limpeza)
 						} se (limpeza < 4) {
-							escreva(nomePet, " está sujo(a)! Limpeza em ", limpeza)
+							escreva("\n", nomePet, " está sujo(a)! Limpeza em ", limpeza)
 						}
 						
 						se (tempoHora == 24) {
 							tempoDia++
 							tempoHora = 0
 						}
+					} se (avancarTempo == 2) {
+						escreva("\n
 					}
 	
 					se (tempoDia <= 1) {
@@ -90,7 +92,7 @@ programa
 						escreva("\n", tempoDia, " dias e ", tempoHora, " horas")
 					}
 					
-					escreva("\n--------------")
+					escreva("\n--------------\n")
 				} enquanto (avancarTempo < 2 e tempoDia < 7 e fome < 10 e limpeza > 0)
 			} se (menu == 2) {
 				faca {
@@ -104,7 +106,7 @@ programa
       						chanceDoente = u.sorteia(1,10)
         							
         						se(chanceDoente == 3){
-        							escreva("\n", nomePet, " deve ter comido algo estragado e acabou ficando(a) doente! :(")
+        							escreva(nomePet, " deve ter comido algo estragado e acabou ficando(a) doente! :(\n")
         							estaDoente = verdadeiro
         							horasDoente = 0
     							}
@@ -114,7 +116,7 @@ programa
 							fome = 0
 							felicidade = felicidade - 2
 
-							escreva("\n", nomePet, " não queria comer e se chateou um pouco...")
+							escreva(nomePet, " não queria comer e se chateou um pouco...")
 
 							se (felicidade >= 7 ) {
 								escreva("\nApesar disso, ", nomePet, " ainda está feliz. Felicidade em ", felicidade)
@@ -152,15 +154,12 @@ programa
 							} se (fome < 4) {
 								escreva("\n", nomePet, " está está bem alimentado(a)! Fome em ", fome)
 							}
-							
-							escreva("\n--------------")
 						}
 					} se (alimentar == 2){
 						escreva("\nVocê decidiu não alimentar o(a) ", nomePet, "!")
 						escreva("\nFome atual: ", fome)
-						
-						escreva("\n--------------")
 					}
+				escreva("\n--------------")
 				} enquanto (fome >= 4 e felicidade > 0 e alimentar > 1)
 			} se (menu == 3) {
 				faca {
@@ -280,7 +279,7 @@ programa
 			se (felicidade <= 0) {
 				felicidade = 0
 
-				escreva("O coração de ", nomePet, " ficou triste por muito tempo… Ele sentia falta de atenção e carinho.\nDa próxima vez, tente passar mais tempo junto com ele.")
+				escreva("\nO coração de ", nomePet, " ficou triste por muito tempo… Ele sentia falta de atenção e carinho.\nDa próxima vez, tente passar mais tempo junto com ele.")
 			}
 			se (fome >= 10) {
 				fome = 10
@@ -296,7 +295,7 @@ programa
 				escreva(nomePet, " viveu uma vida longa e feliz ao seu lado. Ele se despede com um sorriso, agradecendo por todo o carinho.\nParabéns, você cuidou muito bem dele.")
 			}
 			escreva("\n--------------\n")
-			escreva("Status final:")
+			escreva("Status final: ")
 			escreva("Felicidade: ", felicidade, " | Fome: ", fome, " | Limpeza: ", limpeza)
 		}
 		
