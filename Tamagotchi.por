@@ -91,7 +91,7 @@ programa
 					}
 					
 					escreva("\n--------------\n")
-				} enquanto (avancarTempo < 2 e tempoDia < 7)
+				} enquanto (avancarTempo < 2 e tempoDia < 7 e fome > 10 e limpeza < 0)
 			} se (menu == 2) {
 				faca {
 					//funcao alimentar -> ao alimentar o pet a fome diminui em 4 com máximo de 0; caso nao esteja com fome a felicidade diminui em 2
