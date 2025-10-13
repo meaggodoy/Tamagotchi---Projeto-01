@@ -34,7 +34,7 @@ programa
 						//a cada 8h o pet tem chance de se curar sozinho
 						se (estaDoente == verdadeiro) {
 							horasDoente = horasDoente + 8
-  							escreva("\n", nomePet, " esta à " , horasDoente ," horas doente :(\n")
+  							escreva(nomePet, " esta à " , horasDoente ," horas doente :(\n")
 
   							se(horasDoente == 8){
     								chanceCurar = u.sorteia(1,3)
@@ -42,7 +42,7 @@ programa
 								se(chanceCurar == 1){
 							     	estaDoente = falso
 							     	horasDoente = 0
-							     	escreva("\n", nomePet, " esta curado(a)!!")
+							     	escreva(nomePet, " esta curado(a)!!")
 								}
 							} se (horasDoente == 16) {
 							     chanceCurar = u.sorteia(1,3)
@@ -50,32 +50,32 @@ programa
 							     se (chanceCurar <= 2) {
 							     	estaDoente = falso
 							     	horasDoente = 0
-							     	escreva("\n", nomePet, " esta curado(a)!!")
+							     	escreva(nomePet, " esta curado(a)!!")
 							     }
 							} se (horasDoente >= 24) {
 							    estaDoente = falso
 							    horasDoente = 0 
-							    escreva("\n", nomePet, " esta curado(a)!!")
+							    escreva(nomePet, " esta curado(a)!!")
 							}
 						}
 
 						//a cada avancar tempo a limpeza diminui em 2 e a fome aumenta
 						fome = fome + 4
 						se (fome >= 7 ) {
-							escreva("\n", nomePet, " está com fome! Vamos alimentá-lo(a)? Fome em ", fome)
+							escreva(nomePet, " está com fome! Vamos alimentá-lo(a)? Fome em ", fome)
 						} se (fome >= 4 e fome < 7) {
-							escreva("\n", nomePet, " está com um pouco de fome.. Fome em ", fome)
+							escreva(nomePet, " está com um pouco de fome.. Fome em ", fome)
 						} se (fome < 4) {
-							escreva("\n", nomePet, " está está bem alimentado(a)! Fome em", fome)
+							escreva(nomePet, " está está bem alimentado(a)! Fome em", fome)
 						}
 	        				
 	        				limpeza = limpeza - 2	        				
 						se (limpeza >= 7 ) {
-							escreva("\n", nomePet, " está limpo(a)! Limpeza em ", limpeza)
+							escreva(nomePet, " está limpo(a)! Limpeza em ", limpeza)
 						} se (limpeza >= 4 e limpeza < 7) {
-							escreva("\n", nomePet, " está ficando sujo(a).. Limpeza em ", limpeza)
+							escreva(nomePet, " está ficando sujo(a).. Limpeza em ", limpeza)
 						} se (limpeza < 4) {
-							escreva("\n", nomePet, " está sujo(a)! Limpeza em ", limpeza)
+							escreva(nomePet, " está sujo(a)! Limpeza em ", limpeza)
 						}
 						
 						se (tempoHora == 24) {
@@ -90,8 +90,8 @@ programa
 						escreva("\n", tempoDia, " dias e ", tempoHora, " horas")
 					}
 					
-					escreva("\n--------------\n")
-				} enquanto (avancarTempo < 2 e tempoDia < 7 e fome > 10 e limpeza < 0)
+					escreva("\n--------------")
+				} enquanto (avancarTempo < 2 e tempoDia < 7 e fome < 10 e limpeza > 0)
 			} se (menu == 2) {
 				faca {
 					//funcao alimentar -> ao alimentar o pet a fome diminui em 4 com máximo de 0; caso nao esteja com fome a felicidade diminui em 2
@@ -153,13 +153,13 @@ programa
 								escreva("\n", nomePet, " está está bem alimentado(a)! Fome em ", fome)
 							}
 							
-							escreva("\n--------------\n")
+							escreva("\n--------------")
 						}
 					} se (alimentar == 2){
 						escreva("\nVocê decidiu não alimentar o(a) ", nomePet, "!")
 						escreva("\nFome atual: ", fome)
 						
-						escreva("\n--------------\n")
+						escreva("\n--------------")
 					}
 				} enquanto (fome >= 4 e felicidade > 0 e alimentar > 1)
 			} se (menu == 3) {
@@ -217,7 +217,8 @@ programa
 				se(tomarBanho == 1){
 					se (limpeza >= 10){
 						felicidade = felicidade - 6
-							
+						escreva("Você deu banho no(a) ", nomePet, ", mas ele(a) não estava sujo(a)!")
+
 						se (felicidade > 0) {	
 							escreva("Você deu banho no(a) ", nomePet, ", mas ele(a) não estava sujo(a)!")
 
@@ -237,7 +238,7 @@ programa
 				} se(tomarBanho == 2) { 
 					escreva("\n", nomePet, " não tomou banho!")
 				}
-				escreva("\n--------------\n")																
+				escreva("\n--------------")																
   			} se (menu == 5) {
   				//funcao status -> apresenta cada status do pet ao jogador
   				se (tempoDia <= 1) {
@@ -269,6 +270,7 @@ programa
 				} se (fome < 4) {
 					escreva("\n", nomePet, " está está bem alimentado(a)! Fome em ", fome)
 				}
+				escreva("\n--------------")
   			}
 		} enquanto (menu < 6 e felicidade > 0 e fome < 10 e limpeza > 0 e tempoDia < 7)
 		//área de experiência e resultado do usuário
@@ -292,11 +294,10 @@ programa
 			}
 			se (tempoDia == 7) {
 				escreva(nomePet, " viveu uma vida longa e feliz ao seu lado. Ele se despede com um sorriso, agradecendo por todo o carinho.\nParabéns, você cuidou muito bem dele.")
-				escreva("\n--------------\n")	
-
-				escreva("Status final:")
-				escreva("Felicidade: ", felicidade, " | Fome: ", fome, " | Limpeza: ", limpeza)
 			}
+			escreva("\n--------------\n")
+			escreva("Status final:")
+			escreva("Felicidade: ", felicidade, " | Fome: ", fome, " | Limpeza: ", limpeza)
 		}
 		
 	}
