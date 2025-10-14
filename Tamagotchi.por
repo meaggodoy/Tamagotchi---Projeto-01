@@ -83,7 +83,7 @@ programa
 							tempoHora = 0
 						}
 					} se (avancarTempo == 2) {
-						escreva("\n
+						escreva("\nVocê decidiu não avançar o tempo")
 					}
 	
 					se (tempoDia <= 1) {
