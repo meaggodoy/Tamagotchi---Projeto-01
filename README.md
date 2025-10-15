@@ -1,60 +1,114 @@
-# Tamagotchi Projeto01
-Primeiro projeto da disciplina de Conceitos de Algoritmos.
+# 🐾 Bitzi – Seu Novo Pet Virtual  
 
-Apresentado no dia 23 de novembro de 1996, o Tamagotchi era uma espécie de chaveiro que
-abrigava um bichinho virtual que pedia por doses regulares de alimento virtual, atenção virtual
-e carinho virtual. Agora, você! Isso mesmo, você, junto de seu time de desenvolvimento, terá a
-honra de implementar uma versão dessa febre dos anos 90.
-O virtual pet terá as seguintes informações atreladas a ele:
-- Tempo de vida: inicia com 0 dias vivo, a cada 24 horas, envelhece um dia. O tempo
-máximo de vida é de 7 dias.
-- Felicidade: começa em 5. Comer ao estar com fome, brincar e dormir, aumentam esse
-atributo. Ser forçado a comer ou ficar muito tempo sujo e sem diversão (jogar), diminuem esse
-atributo. O valor máximo para esse atributo é 10. Caso o atributo felicidade chegue a zero, o
-virtual pet morre de tristeza 😕 .
-- Limpeza: Esse atributo inicia com 10 pontos. Ao passar o tempo sem tomar banho,
-esse atributo diminui. Um bichinho super sujo morre por sujeira. Tomar banho aumenta esse
-atributo. Tomar banho estando limpo diminui o atributo felicidade.
-- Fome: Esse atributo inicia com 0. Ao passar o tempo, esse atributo aumenta. Um pet
-faminto morre de fome. Comer diminui esse atributo, até chegar ao máximo de zero. Tentar
-alimentar um pet contra sua vontade o deixará triste.
-- Doente: Esse atributo indicará se o pet está ou não doente. Ele poderá ficar doente
-ao acaso (de maneira aleatória). Caso ele esteja doente, a cada 8 horas ele deverá ter chance
-de se curar sozinho. Isso acontecerá com 33.3% de chance após 8 horas da doença iniciada.
-Após 16 horas ele terá 66.6% de chance de ser curado e após 24 horas ele estará curado.
-O projeto deve conter todas as funcionalidades detalhadas na seção de menu a seguir. Além
-disso, ao iniciar o programa pela primeira vez, o usuário deverá escolher o nome para seu
-‘virtual pet’. A partir daí, todas as frases deverão ser personalizadas para chamar o bichinho
-pelo nome escolhido.
-O trabalho se consiste em desenvolver um projeto funcional de um bichinho virtual. O algoritmo
-deve ter um menu inicial, com as seguintes opções:
-1. Avançar o tempo
-2. Alimentar
-3. Jogar
-4. Dar banho
-5. Ver status
-6. Desligar
+### Projeto da disciplina **Conceitos de Algoritmos**  
+Desenvolvido por **GLGM StudIos**
 
-Detalhamento de funções:
-- Avançar o tempo: Ao escolher essa função, o jogador faz o pet “avançar 8 horas de vida”
-em seu tempo. Isso impactará em diversas das funcionalidades do bichinho virtual. A cada
-24horas passadas, o pet envelhece um dia. O tempo máximo de vida para o pet é de 7
-dias, após isso, ele morre de velhice. Nesse caso, o jogador ‘ganha o jogo’, pois fez com
-que seu bichinho vivesse feliz até o fim.
-- Alimentar: Ao alimentar o pet, sua fome diminuirá em 4 pontos. Chegando ao máximo de
-fome 0. Tentar alimentar um pet que está com fome 0, fará com que sua felicidade diminua
-em 2 pontos.
-- Jogar: Ao escolher a função jogar, o pet e o usuário farão uma partida de pedra, papel e
-tesoura. Caso o pet vença, sua felicidade aumentará em 5 pontos. Caso ele perca, sua
-felicidade aumentará em 3 pontos.
-- Dar banho: A função de dar banho fará com que a limpeza de seu pet chegue a 10 pontos.
-A cada 8 horas, o pet perde 2 pontos em limpeza. Tentar dar banho em um pet com 10
-pontos de limpeza, fará com que ele reduza a felicidade em 6 pontos.
-- Ver status: A função ver status deve mostrar ao usuário todas as informações pertinentes
-para que o usuário possa cuidar de seu pet da maneira adequada. Também deve mostrar
-a idade atual do pet. Extra: O programador pode disparar mensagens fora dessa função
-para alertar ao usuário quando seu pet estiver necessitando de cuidado urgente, para
-tentar evitar sua morte precoce.
-- Caso o pet morra de fome, tristeza ou sujeira, o programa deverá encerrar, mostrando a
-mensagem para o usuário de tempo de vida do pet e informando a causa da sua morte
-precoce.
+---
+
+## 📖 Sobre o Projeto  
+
+Apresentado pela primeira vez em 1996, o **Tamagotchi** marcou gerações como o primeiro bichinho virtual que precisava de cuidados e atenção constantes.  
+Inspirado nessa ideia, o projeto **BitziBitzi** recria essa experiência nostálgica com um toque moderno, implementando um **pet virtual interativo** totalmente programado em linguagem de algoritmo.
+
+O objetivo é simular o ciclo de vida de um pet digital, permitindo ao jogador alimentá-lo, brincar, dar banho, acompanhar seu humor e garantir que ele viva feliz até o fim de sua jornada.  
+
+---
+
+## 💻 Funcionalidades Principais  
+
+O BitziBitzi possui um **menu interativo** com as seguintes opções:
+
+### ▶️ Avançar o tempo  
+- Avança **8 horas de vida** do pet.  
+- A cada **24 horas**, ele envelhece **1 dia**.  
+- O tempo máximo de vida é de **7 dias** — se alcançar, o jogador **vence o jogo**.  
+
+### 🍖 Alimentar  
+- Diminui a **fome** em 4 pontos (mínimo 0).  
+- Alimentar sem necessidade reduz a **felicidade** em 2 pontos.  
+
+### 🎮 Jogar  
+- Realiza uma partida de **Pedra, Papel e Tesoura** entre o jogador e o pet.  
+- Se o pet vencer → **+5 felicidade**  
+- Se o pet perder → **+3 felicidade**  
+
+### 🧼 Dar banho  
+- Restaura a **limpeza** para 10 pontos.  
+- A cada 8 horas, o pet perde **2 pontos de limpeza**.  
+- Dar banho com limpeza máxima reduz a **felicidade** em 6 pontos.  
+
+### 💓 Ver status  
+- Mostra os atributos atuais:  
+  - Idade  
+  - Felicidade  
+  - Fome  
+  - Limpeza  
+  - Estado de saúde (doente ou saudável)  
+
+### ❌ Desligar  
+- Encerra o programa e mostra um resumo final da vida do pet.
+
+---
+
+## ⚙️ Atributos do Pet  
+
+| 🧩 Atributo | 💬 Descrição | ☠️ Condições de Morte |
+|--------------|---------------|-----------------------|
+| **Tempo de vida** | Começa com 0 dias e vai até 7. | Morre de velhice após 7 dias. |
+| **Felicidade** | Começa com 5 (máximo 10). | Se chegar a 0 → morre de tristeza. |
+| **Limpeza** | Começa com 10. | Se chegar a 0 → morre por sujeira. |
+| **Fome** | Começa com 0. | Se chegar ao máximo (10) → morre de fome. |
+| **Doença** | Pode ocorrer aleatoriamente. | Recuperação automática conforme tempo (33%, 66%, 100%). |
+
+---
+
+## 🧠 Lógica do Sistema  
+
+- Cada ação impacta diretamente o estado emocional e físico do pet.  
+- O tempo é o principal fator de progressão.  
+- As decisões do jogador determinam se o pet viverá feliz ou morrerá precocemente.  
+- Mensagens de alerta informam quando o pet precisa de atenção imediata.  
+
+---
+
+## 🧩 Estrutura do Código  
+
+O programa foi desenvolvido com **estrutura modular**, contendo funções separadas para:  
+- Controle de tempo e envelhecimento  
+- Alimentação e cálculo de fome  
+- Interações (jogar, banho, etc.)  
+- Sistema de doenças aleatórias  
+- Exibição de status e encerramento do jogo  
+
+---
+
+## 🌟 Diferenciais  
+
+- Sistema de **eventos aleatórios** e consequências reais.  
+- Interações simples e dinâmicas.  
+- Código otimizado e adaptável para **desktop, web ou mobile**.  
+- **Baixo consumo de recursos** e estrutura pronta para expansão futura  
+  (cores, tipos de pet, interface gráfica etc).  
+
+---
+
+## 👥 Sobre a Equipe  
+
+### **GLGM StudIos**
+> Estúdio de tecnologia focado em entretenimento digital e simulações interativas.  
+
+**Missão:** Criar experiências virtuais que conectem pessoas e tecnologia.  
+**Visão:** Tornar-se referência em pets virtuais e jogos de simulação.  
+**Valores:** Criatividade, inovação, engajamento e diversão.  
+
+---
+
+## 🎯 Público-Alvo  
+
+- Jovens e adultos nostálgicos dos Tamagotchis.  
+- Jogadores casuais em busca de experiências leves e relaxantes.  
+- Usuários de desktop e mobile que apreciam jogos simples e recompensadores.  
+
+---
+   ```bash
+   git clone https://github.com/seuusuario/bitzibitsi.git
