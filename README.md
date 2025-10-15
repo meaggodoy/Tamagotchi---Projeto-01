@@ -110,5 +110,4 @@ O programa foi desenvolvido com **estrutura modular**, contendo funções separa
 - Usuários de desktop e mobile que apreciam jogos simples e recompensadores.  
 
 ---
-   ```bash
-   git clone https://github.com/seuusuario/bitzibitsi.git
+Obrigada :)
