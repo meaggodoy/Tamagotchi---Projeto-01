@@ -92,7 +92,7 @@ programa
 						escreva("\n", tempoDia, " dias e ", tempoHora, " horas")
 					}
 					
-					escreva("\n--------------\n")
+					escreva("\n--------------")
 				} enquanto (avancarTempo < 2 e tempoDia < 7 e fome < 10 e limpeza > 0)
 			} se (menu == 2) {
 				faca {
@@ -137,7 +137,7 @@ programa
 	        						fome = 0
 	        					}
 						
-							escreva ("\nVocê alimentou ", nomePet, "!")
+							escreva ("Você alimentou ", nomePet, "!")
 
 							se (felicidade >= 7 ) {
 								escreva("\n", nomePet, " está feliz! Felicidade em ", felicidade)
@@ -156,7 +156,7 @@ programa
 							}
 						}
 					} se (alimentar == 2){
-						escreva("\nVocê decidiu não alimentar o(a) ", nomePet, "!")
+						escreva("Você decidiu não alimentar o(a) ", nomePet, "!")
 						escreva("\nFome atual: ", fome)
 					}
 				escreva("\n--------------")
@@ -167,7 +167,7 @@ programa
 					escreva("Oba! Então vamos jogar! Vamos jogar uma partida de Jokempô!\nAs regras são simples:\nPedra ganha da Tesoura; Papel ganha da Pedra; Tesoura ganha do Papel")
 					escreva("\nAgora é sua vez! Escolha: (1) Pedra | (2) Papel | (3) Tesoura\n")
 	    				leia(numSelecionado)
-	    				escreva("\n--------------\n")
+	    				escreva("--------------\n")
 	
 	    				jokenpo = u.sorteia(1,3)
 	
@@ -231,7 +231,7 @@ programa
 						}
 					} se (limpeza < 10) {
 						limpeza = 10
-						escreva("Você deu banho no(a)", nomePet, "!") 
+						escreva("Você deu banho no(a) ", nomePet, "!") 
 						escreva("\n", nomePet, " agora está limpo(a)! Limpeza em: ", limpeza)
 					} 
 				} se(tomarBanho == 2) { 
@@ -301,26 +301,3 @@ programa
 		
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 4021; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 12049; 
- * @DOBRAMENTO-CODIGO = [157, 163, 215];
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
