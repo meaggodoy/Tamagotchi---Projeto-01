@@ -1,7 +1,7 @@
 # 🐾 Bitzi – Seu Novo Pet Virtual  
 
 ### Projeto da disciplina **Conceitos de Algoritmos**  
-Desenvolvido por **GLGM StudIos**
+Desenvolvido por **GLGM StudIos** - Gabryel, Luís Everaldo, Gustavo Pena e Maria Eduarda
 
 ---
 
